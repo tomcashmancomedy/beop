@@ -2,10 +2,15 @@
 <html>
   <head>
     <script>
-      const a = Math.floor(Math.random() * 20) + 1;
-      const b = Math.floor(Math.random() * 20) + 1;
-      const c = Math.floor(Math.random() * 4) + 1;
-      window.location.href = "https://form.typeform.com/to/T20E0krj#a=" + a + "&b=" + b + "&c=" + c;
+      const activities = ["Cooking","Reading","Hiking","Gaming","Raves","Gardening","Photography","Travelling","Basketball","Running","Swimming","Live music","Movies","Yoga","Cycling","Astronomy","Jiu Jitsu","Rock climbing","Pub","Meditation"];
+      const traits = ["Curious","Goofy","Impatient","Empathetic","Creative","Resilient","Annoying","Talkative","Generous","Adventurous","Calm","Hilarious","Weird","Shy","Honest","Anxious","Patient","Spontaneous","Loyal","Optimistic"];
+      const seasons = ["Spring","Summer","Autumn","Winter"];
+
+      const a = activities[Math.floor(Math.random() * activities.length)];
+      const b = traits[Math.floor(Math.random() * traits.length)];
+      const c = seasons[Math.floor(Math.random() * seasons.length)];
+
+      window.location.href = "https://form.typeform.com/to/T20E0krj#activity=" + encodeURIComponent(a) + "&trait=" + encodeURIComponent(b) + "&season=" + encodeURIComponent(c);
     </script>
   </head>
   <body></body>
